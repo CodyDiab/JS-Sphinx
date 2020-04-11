@@ -1,0 +1,22 @@
+/*Header Styles*/ 
+
+header{
+    display: flex;
+    justify-content: center;
+   
+}
+.page-title{
+    text-align: justify;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+/*Quiz sheet styles
