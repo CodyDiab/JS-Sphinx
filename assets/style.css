@@ -1,5 +1,5 @@
 /*Header Styles*/ 
-
+*{ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 header{
     display: flex;
     justify-content: center;
@@ -18,5 +18,28 @@ header{
 
 
 
-
-/*Quiz sheet styles
+/*Quiz sheet styles*/
+main{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3vw;
+    text-align: center;
+}
+.choice{
+    font-style: italic;
+}
+.choice:hover{
+    background-color: rgb(126, 30, 30,.4);
+    
+}
+#start-button-container{
+    display: flex;
+    align-items: center;
+}
+.start-button{
+    border-radius: 30%;
+    border: 20px;
+    background-color: rgb(126, 30, 30,.4);
+    margin:auto;
+}

@@ -8,11 +8,32 @@
 </head>
 <body>
     <header>
+        <p class="time"></p>
         <p class="page-title">
         <h1>Java Script Sphynx</h1>
         <h4>Timed Quiz Chalenge</h4>
         </p>
+        <p class="score">
+
+        </p>
     </header>
-    <script src="/assets/script.js"></script>
+    <main id="quiz-content">
+        <div id="question"></div>
+        <div id= "choices">
+            <div class="choice" id="A" onclick="checkAnswer('A')">
+            </div>
+            
+            <div class="choice" id="B" onclick="checkAnswer('B')" >
+            </div>
+            
+            <div class="choice" id="C" onclick="checkAnswer('C')">
+            </div>
+        
+        </div>
+    </main>
+    <div id="start-button-container">
+        <button class="start-button" onclick="start()">Begin Quiz</button>
+    </div>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
