@@ -48,8 +48,7 @@
 
  
 
-// var quizContent=document.querySelector("#quiz-content")
-//  var quizBoxEl = document.createElement("div").className = "quiz-box"
+
 
 var score = 0;
 
@@ -61,14 +60,14 @@ var choiceThree = document.getElementById("C");
 let currentQuestion = 0;
 let lastQuestion = questions.length-1
 var timer = document.getElementById("timer")
-
+let timerSecs=30;
 
 function timeCount() {
     
     timerInterval = setInterval(function() {
-    
+       
         timerSecs --;
-        timer.textContent ="Time: " +timerSecs + " seconds";
+        timer.textContent ="Hourglass: " +timerSecs + " seconds";
 
         
         if (timerSecs < 1) {
@@ -80,7 +79,7 @@ function timeCount() {
         };
         
         // clear timer if current question is 5
-        if (currentQuestion === 4) {
+        if (currentQuestion === 5) {
             timer.textContent = timerSecs;
             clearInterval(timerInterval);
         }
@@ -99,14 +98,12 @@ function displayQuestion(){
     choiceOne.innerHTML="<p> 'A'  " + q.choices.choiceA + "</p>";
     choiceTwo.innerHTML="<p> 'B'  " + q.choices.choiceB + "</p>";
     choiceThree.innerHTML="<p> 'C'  " + q.choices.choiceC + "</p>";
-    // choiceOne.addEventListener("click",checkAnswer('A'))
-    // choiceTwo.addEventListener("click",checkAnswer('B'))
-    // choiceThree.addEventListener("click",checkAnswer('C'))
+    
 }
 
 function displayScore(){
-   quizPitch.setAttribute("style","display:none")
-   startButton.setAttribute("style","display:flex")
+    quizPitch.setAttribute("style","display:none")
+    //startButton.setAttribute("style","display:flex")
     var finalScore = score * 100
     timerInterval=null
 alert("Your final score is " + finalScore + "!")
@@ -116,16 +113,14 @@ if (parseInt(highScore) < finalScore || !highScore){
     alert("You have the new highscore of "+finalScore+ "! The Sphynx is satisfied" )
     localStorage.setItem("highscore",finalScore)
     
-}if (parseInt(highScore) = finalScore){
+}if (parseInt(highScore) == finalScore){
     alert("You have tied for the highscore of " +highScore+ " . Narrowly escaping the Sphynx" )
 
 }else{
     alert("Good effort, but you didnt beat the highscore of " +highScore+ ". The Sphynx ate you!!! ")
     
 }
- //compare to highscore in local storage
- //if higher || no high score set to local storage && "you have the highscore of "
- //if less sorry you didnt beet the high score of 
+location.reload()
 }
  
 function start(){
@@ -133,7 +128,7 @@ function start(){
     
     
     startButton.setAttribute("style","display:none");
-    timerSecs=10
+   
     //timer.textContent ="Time: " +timerSecs+ " seconds";
 
     
@@ -152,7 +147,8 @@ function checkAnswer(answer){
         score++
         alert("Correct!")
     }else{
-        alert("Incorrect!")
+        alert("Incorrect! Sand has been removed from the hourglass!")
+        timerSecs=(timerSecs-3)
     }
     if(currentQuestion < lastQuestion){
         currentQuestion++;
