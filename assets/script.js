@@ -103,7 +103,7 @@ function displayQuestion(){
 
 function displayScore(){
     quizPitch.setAttribute("style","display:none")
-    //startButton.setAttribute("style","display:flex")
+   
     var finalScore = score * 100
     timerInterval=null
 alert("Your final score is " + finalScore + "!")
@@ -125,18 +125,11 @@ location.reload()
  
 function start(){
     
-    
-    
-    startButton.setAttribute("style","display:none");
+        startButton.setAttribute("style","display:none");
    
-    //timer.textContent ="Time: " +timerSecs+ " seconds";
+           displayQuestion();
 
-    
-    displayQuestion();
-
-    
-   
-    }
+}
     
 
 
