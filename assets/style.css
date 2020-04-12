@@ -1,20 +1,39 @@
 /*Header Styles*/ 
-*{ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+*{ font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
 header{
     display: flex;
     justify-content: center;
-   
+    align-content: flex-end;
+    background-color: rgb(246, 244, 243);
+    margin-left: 40px;
+    margin-right: 40px;
+    
+    border-radius: 15%;
+    
+    
 }
 .page-title{
-    text-align: justify;
+    
     font-weight: bolder;
     display: flex;
+    align-self: flex-end;
     flex-direction: column;
-    flex-wrap: wrap;
+    margin: 0;
+
 }
 
-
-
+#timer{
+    align-self: flex-end;
+    overflow: hidden;
+}
+img{
+    max-width: 15vw;
+    max-height: 10vw;
+    border-radius: 50%;
+}
 
 
 
@@ -31,7 +50,7 @@ main{
 }
 .choice:hover{
     background-color: rgb(126, 30, 30,.4);
-    
+
 }
 #start-button-container{
     display: flex;
