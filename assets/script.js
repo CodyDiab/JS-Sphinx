@@ -110,14 +110,14 @@ alert("Your final score is " + finalScore + "!")
 
 var highScore = localStorage.getItem("highscore")
 if (parseInt(highScore) < finalScore || !highScore){
-    alert("You have the new highscore of "+finalScore+ "! The Sphynx is satisfied" )
+    alert("You have the new highscore of "+finalScore+ "! The Sphinx is satisfied" )
     localStorage.setItem("highscore",finalScore)
     
 }if (parseInt(highScore) == finalScore){
-    alert("You have tied for the highscore of " +highScore+ " . Narrowly escaping the Sphynx" )
+    alert("You have tied for the highscore of " +highScore+ " . Narrowly escaping the Sphinx" )
 
 }else{
-    alert("Good effort, but you didnt beat the highscore of " +highScore+ ". The Sphynx ate you!!! ")
+    alert("Good effort, but you didnt beat the highscore of " +highScore+ ". The Sphinx ate you!!! ")
     
 }
 location.reload()
